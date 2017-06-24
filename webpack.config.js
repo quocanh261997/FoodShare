@@ -1,12 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+const isProd = process.env.NODE_ENV === 'production';
+const ROOT = path.resolve(__dirname, './');
+
+webpackConfig = {
     entry: {
-        post: './src/post.js'
+        post: './src/js/post.js'
     },
     output: {
-        path: path.resolve('./public/src'),
+        path: path.resolve('./src/public/js'),
         filename: '[name].js'
     },
     module: {
@@ -24,3 +27,41 @@ module.exports = {
         ]
     }
 };
+
+if (isProd) {
+    webpackConfig.output = {
+        path: path.join(ROOT, './dist/public/js'),
+        filename: '[name].js'
+    }
+    webpackConfig.plugins = [
+        new webpack.DefinePlugin({
+            'process.env': {
+                HOST_URL: JSON.stringify('https://api-qd.zoostd.com'),
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+            }
+        }),
+
+        // this is needed in webpack 2 for minify CSS
+        new webpack.LoaderOptionsPlugin({
+            minimize: true,
+            debug: false
+        }),
+
+        // minify JS
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: false,
+            beautify: false,
+            mangle: {
+                screw_ie8: true,
+                keep_fnames: true
+            },
+            compress: {
+                screw_ie8: true
+            },
+            comments: false
+        })
+    ];
+}
+
+module.exports = webpackConfig;
+
