@@ -5,7 +5,7 @@ const router = new Router({
 });
 
 router.get('/', async function(ctx) {
-    await ctx.render('post');
+    await ctx.render('feed');
 });
 
 module.exports = router;

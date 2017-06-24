@@ -6,7 +6,8 @@ const ROOT = path.resolve(__dirname, './');
 
 webpackConfig = {
     entry: {
-        post: './src/js/post.js'
+        explore: './src/js/explore.js',
+        feed: './src/js/feed.js'
     },
     output: {
         path: path.resolve('./src/public/js'),
@@ -64,4 +65,3 @@ if (isProd) {
 }
 
 module.exports = webpackConfig;
-

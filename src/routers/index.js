@@ -3,7 +3,8 @@
  */
 
 const Router = require('koa-router');
-const post = require('./post');
+const explore = require('./explore');
+const feed = require('./feed');
 const Redis = require('../utils/redis').redis;
 
 const Routes = new Router();
@@ -13,7 +14,7 @@ Routes.get('/flush', async (ctx) => {
     ctx.setSuccess(result);
 });
 
-
-Routes.use(post.routes(), post.allowedMethods());
+Routes.use(feed.routes(), feed.allowedMethods());
+Routes.use(explore.routes(), explore.allowedMethods());
 
 module.exports = Routes;
