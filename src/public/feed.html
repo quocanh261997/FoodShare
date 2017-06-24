@@ -5,12 +5,50 @@
     <meta charset="UTF-8">
     <script src="/lib/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style/common.css">
     <link rel="stylesheet" href="/style/feed.css">
     <script src="/js/feed.js"></script>
     <title>Title</title>
 </head>
 <body>
+  <div class="ui secondary  menu">
+      <a class="item">
+          <i class="feed icon"></i>
+          Feed
+      </a>
+      <a class="active item">
+          <i class="compass icon"></i>
+          Explore
+      </a>
+      <a class="item">
+          <i class="food icon"></i>
+          Your Meal
+      </a>
+      <a class="item">
+          <i class="dollar icon"></i>
+          Payment
+      </a>
+      <a class="item">
+          <i class="setting icon"></i>
+          Setting
+      </a>
+      <div class="right menu">
+          <div class="item">
+              <div class="ui icon input">
+                  <input type="text" placeholder="Search...">
+                  <i class="search link icon"></i>
+              </div>
+          </div>
+          <a class="ui item">
+              Logout
+          </a>
+          <a class="ui item">
+              Tien Anh
+          </a>
+      </div>
+  </div>
   <div class="container">
     <div class='col-sm-4 gallery'>
       <a href="#1"><img src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'></a>
@@ -20,19 +58,38 @@
     <div class='col-sm-4 gallery'><img src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'></div>
   </div>
 
-  <div id="1" class="modalDialog">
-    <a href="#close" title="Close" class="close">X</a>
-    <div class="container">
-      <div class="col-sm-8">
-        <img class='image-view' src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4>Hambuger</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+          	<div class="col-sm-8">
+            	<span><img src=""></span>
+            </div>
+            <div class="col-sm-4">
+            	<p><img class='icon' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gordon_Ramsay_Chef_%28cropped%29.jpg/1200px-Gordon_Ramsay_Chef_%28cropped%29.jpg'><b> Gordon Ramsay</b></p>
+                <p><b>Graham Elliot</b> this dish is suck!</p>
+                <span><i class='empty heart icon'></i><i class='comment outline icon'></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <h2>Modal Box</h2>
-    		<p>This is a sample modal box that can be created using the powers of CSS3.</p>
-    		<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
-      </div>
+
     </div>
   </div>
-<p class="text-center">heloo</p>
+
+<p class="text-center"><i class='empty heart icon'></i>heloo</p>
 </body>
 </html>
