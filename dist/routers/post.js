@@ -1,10 +1,10 @@
 const Router = require('koa-router');
 
 const router = new Router({
-    prefix: '/feed'
+    prefix: '/post'
 });
 
-router.get('/', async function(ctx) {
+router.get('/:postId', async function(ctx) {
     await ctx.render('post');
 });
 
