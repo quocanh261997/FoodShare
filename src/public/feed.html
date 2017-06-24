@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script src="/lib/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style/feed.css">
     <script src="/js/feed.js"></script>
     <title>Title</title>
 </head>
 <body>
-hello
+  <div class="container">
+    <div class='col-sm-4 gallery'>
+      <a href="#1"><img src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'></a>
+    </div>
+    <div class='col-sm-4 gallery'><img src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'></div>
+    <div class='col-sm-4 gallery'><img src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'></div>
+    <div class='col-sm-4 gallery'><img src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'></div>
+  </div>
+
+  <div id="1" class="modalDialog">
+    <a href="#close" title="Close" class="close">X</a>
+    <div class="container">
+      <div class="col-sm-8">
+        <img class='image-view' src='https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg'>
+      </div>
+      <div class="col-sm-4">
+        <h2>Modal Box</h2>
+    		<p>This is a sample modal box that can be created using the powers of CSS3.</p>
+    		<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+      </div>
+    </div>
+  </div>
+<p class="text-center">heloo</p>
 </body>
 </html>
