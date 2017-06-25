@@ -7,7 +7,9 @@ const ROOT = path.resolve(__dirname, './');
 webpackConfig = {
     entry: {
         explore: './src/js/explore.js',
-        feed: './src/js/feed.js'
+        feed: './src/js/feed.js',
+        order: './src/js/order.js',
+        pickup: './src/js/pickup.js'
     },
     output: {
         path: path.resolve('./src/public/js'),

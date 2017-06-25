@@ -1,0 +1,33 @@
+$(document).ready(function(){
+  $("#credit").click(function(e){
+    e.preventDefault();
+    $("form").toggle(1000);
+    $("#cash").toggleClass("disabled");
+  });
+  $("#cash").click(function(e){
+    $("#credit").toggleClass("disabled");
+  });
+  $("#next2").click(function(e){
+    e.preventDefault();
+    window.location.replace("/order");
+  });
+  $("#confirm").click(function(e){
+    $("#confirm").html("CANCEL");
+    $("#confirmation").addClass("loading");
+    setTimeout(function(){
+      $("#confirmation").html("<i class='check circle outline icon' style='font-size:100px; color:green; margin-top:50px;'></i><h3>Your order has been successfully ordered</h3>");
+      $("#confirm").hide();
+      $("#now").removeClass("active");
+      $("#now").addClass("completed");
+      $("#confirmation").removeClass("loading");
+    },1000);
+  });
+  $("#prev").click(function(e){
+    e.preventDefault();
+    window.location.replace("/order/pickup");
+  });
+  $("#prev2").click(function(e){
+    e.preventDefault();
+    window.location.replace("/order/biling");
+  })
+});

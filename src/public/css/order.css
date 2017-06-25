@@ -1,0 +1,16 @@
+body{
+  margin-top: 50px;
+  text-align: center;
+}
+
+#main{
+  display: inline-block;
+}
+
+.segment{
+  margin-top: 20px;
+}
+
+#detail{
+  text-align: left;
+}
