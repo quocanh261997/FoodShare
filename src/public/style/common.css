@@ -24,3 +24,9 @@ body {
     height: 100% !important;
     position: absolute;
 }
+
+.inner {
+  text-align: center;
+  margin-top: 20%;
+  word-wrap: break-word;
+}
