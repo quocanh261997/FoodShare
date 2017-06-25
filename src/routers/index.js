@@ -5,6 +5,7 @@
 const Router = require('koa-router');
 const explore = require('./explore');
 const feed = require('./feed');
+const food = require('./food');
 const order = require('./order');
 const Redis = require('../utils/redis').redis;
 
@@ -17,7 +18,7 @@ Routes.get('/flush', async (ctx) => {
 
 Routes.use(feed.routes(), feed.allowedMethods());
 Routes.use(explore.routes(), explore.allowedMethods());
+Routes.use(food.routes(), food.allowedMethods());
 Routes.use(order.routes(),order.allowedMethods());
-
 
 module.exports = Routes;
