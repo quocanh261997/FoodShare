@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="/lib/jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+  <link rel="stylesheet" href="/css/order.css">
+  <script type="text/javascript" src="/js/pickup.js"></script>
+  <title>Order Details</title>
+</head>
+
+<body>
+  <div class="container" id="main">
+    <div class="ui steps">
+      <div class="active step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirmation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui segment" id="transportation">
+      <h2>Choose your shipping option: </h2>
+      <h1>Pick Up</h1>
+      <form class="ui form" align="left">
+        <div class="field" id="time">
+          <label style="font-size:15px;">When</label>
+          <div class="ui search">
+            <input type="text" name="time" placeholder="10:00 AM">
+          </div>
+        </div>
+        <div class="field" id="note1">
+          <label style="font-size:15px;">Note to chef</label>
+          <div class="ui search">
+            <input type="text" name="note" placeholder="Note to chef any specific requirements you like (ex: allergy,etc...)">
+          </div>
+        </div>
+      </form>
+      <br>
+      <button class="ui fluid positive button" id="next1">NEXT</button>
+    </div>
+  </div>
+</body>
+
+</html>
